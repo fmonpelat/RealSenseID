@@ -40,19 +40,19 @@ public:
 
 // match element used during authentication flow, where we match between faceprints object received from the device
 // to user objects read from the DB. 
-class MatchElement
-{
-public:
-    RealSenseID::MatchElement_t data;
-};
+    class MatchElement
+    {
+    public:
+        RealSenseID::MatchElement_t data;
+    };
 
 // faceprints plus username element.
-typedef struct UserFaceprints  
-{
-    char        user_id[RSID_MAX_USER_ID_LENGTH_IN_DB];
-    Faceprints  faceprints;
-} UserFaceprints_t;
+    struct UserFaceprints
+    {
+        char        user_id[RSID_MAX_USER_ID_LENGTH_IN_DB];
+        Faceprints  faceprints;
+    };
 
-} // namespace RealSenseID 
+} // namespace RealSenseID
 
 #endif // __FACEPRINTSS__H___

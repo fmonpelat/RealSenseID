@@ -1,8 +1,11 @@
+ext {
+    junitVersion = '4.13.2'
+}
 buildscript {
     
     repositories {
         google()
-        jcenter()
+        mavenCentral()
         
     }
     dependencies {
@@ -13,7 +16,7 @@ buildscript {
 allprojects {
     repositories {
         google()
-        jcenter()
+        mavenCentral()
     }
 }
 
